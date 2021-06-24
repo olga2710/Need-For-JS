@@ -67,14 +67,14 @@ function normal(){
 }
 function media(){
     setting.speed = 4;
-    setting.traffic = 4;
+    setting.traffic = 6;
     console.log(setting);
     startGame();
 }
 
 function hard (){
     setting.speed = 5;
-    setting.traffic = 5;
+    setting.traffic = 8;
     startGame();
 }
 function startGame (){
@@ -128,15 +128,21 @@ function playGame(){
         score.innerHTML = 'SCORE<br>'+setting.score;
         if (keys.ArrowLeft && setting.x >0){
             setting.x -= setting.speed;
+            console.log('r');
         }
         if (keys.ArrowRight && setting.x<(gameArea.offsetWidth - car.offsetWidth)){
             setting.x+= setting.speed;
+            console.log('l');
         }
         if (keys.ArrowDown && setting.y<(gameArea.offsetHeight - car.offsetHeight)){
             setting.y += setting.speed;
+            console.log('t');
+
         }
         if (keys.ArrowUp && setting.y>0){
             setting.y -=setting.speed;
+            console.log('b');
+
         }
         car.style.left = setting.x + 'px';
         car.style.top = setting.y + 'px';
