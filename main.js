@@ -56,8 +56,8 @@ function getQuantityElements(heightElement){
 
 }
 function easy (){
-    setting.speed = 2;
-    setting.traffic = 2;
+    setting.speed = 3;
+    setting.traffic = 5;
     startGame();
 }
 function normal(){
@@ -67,14 +67,14 @@ function normal(){
 }
 function media(){
     setting.speed = 4;
-    setting.traffic = 6;
+    setting.traffic = 2;
     console.log(setting);
     startGame();
 }
 
 function hard (){
-    setting.speed = 5;
-    setting.traffic = 8;
+    setting.speed = 6;
+    setting.traffic = 2;
     startGame();
 }
 function startGame (){
