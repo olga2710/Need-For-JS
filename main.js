@@ -20,7 +20,7 @@ let record =0;
 car.classList.add('car');
 
 restart.addEventListener('click', startGame);
-playButton.addEventListener('click', startGame);
+playButton.addEventListener('click', normal);
 document.addEventListener('keydown', startRun);
 document.addEventListener('keyup', stopRun);
 
@@ -58,10 +58,13 @@ function getQuantityElements(heightElement){
 function easy (){
     setting.speed = 2;
     setting.traffic = 2;
-    console.log(setting);
     startGame();
 }
-
+function normal(){
+    setting.traffic = 3;
+    setting.speed = 3;
+    startGame();
+}
 function media(){
     setting.speed = 4;
     setting.traffic = 4;
